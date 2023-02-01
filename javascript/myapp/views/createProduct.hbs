@@ -1,0 +1,49 @@
+<!-- Task 6 -->
+<form method="post">
+    <div class="mdc-form-field">
+        <div class="mdc-text-field">
+            <input type="text" id="name" name="name" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="name">Enter Patient Name</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+    </div>
+    <div class="mdc-text-field mdc-text-field--textarea">
+        <textarea id="textarea" class="mdc-text-field__input" rows="8" cols="40" name="description"></textarea>
+        <div class="mdc-notched-outline">
+            <div class="mdc-notched-outline__leading"></div>
+            <div class="mdc-notched-outline__notch">
+            <label for="textarea" class="mdc-floating-label">State of illness</label>
+            </div>
+            <div class="mdc-notched-outline__trailing"></div>
+        </div>
+    </div>
+    <div class="mdc-form-field">
+        <div class="mdc-text-field">
+            <input type="text" id="name" name="stages" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="stages">Signatures required</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+    </div>
+    <div class="mdc-form-group">
+        <div class="mdc-select width-100">
+            <i class="mdc-select__dropdown-icon"></i>
+            <select class="mdc-select__native-control" name="identity">
+                <option value="" disabled selected></option>
+                {{#each users as |label|}}
+                    <option value="{{label}}">{{label}}</option>
+                {{/each}}
+            </select>
+            <label class="mdc-floating-label">Pick a Doctor</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+    </div>
+
+    <div class="mdc-form-group">
+        <button class="mdc-button mdc-button--raised" type="submit">
+            <span class="mdc-button__label">Upload</span>
+        </button>
+    </div>
+
+</form>
+
+<a href="/">Back</a>
