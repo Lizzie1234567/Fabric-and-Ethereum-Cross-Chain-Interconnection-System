@@ -31,3 +31,58 @@ relay chain to carry out relay communication of multiple nodes, which can have B
 tolerance. The third method is a feasible method proposed by IBM, which is to strip the abi of 
 Ethereum and deploy it on the Hyperledger Fabric, so that the node actually conforms to the 
 consensus of the Hyperledger Fabric, thereby realizing safe communication.
+
+
+*Environmental requirements:
+
+ganache-cli/image, node.js, npm, truffle, Web3
+
+*Ethereum smart contract part:
+
+truffle compile
+
+compile
+
+2_deploy_migration.js has been modified and added to the folder
+
+connect ganache
+
+truffle migrate
+
+Execute index.js to realize addition, deletion, modification and query
+
+*Hyperledger part:
+
+Go language compiles chaincode
+
+Run startfabric.sh to connect to hyperledger
+
+Create admin, creator, manager and other nodes
+
+Call index.js and other files through the web page to perform additions, deletions, changes, and queries
+
+*File location:
+
+chaincode:
+Training/fabric-samples/chaincode
+
+Javascript:
+Training/fabric-samples/fabcomp/Javascript
+
+*Interactive part:
+
+Redeploy the smart contract under the route folder. According to the above method, the same web3 dependencies should also be installed in this folder
+
+add patient pat-s
+
+start hyperledger network
+
+add patient pat-h
+
+After connecting to the webpage, you can find that the connection has been realized
+
+Search the name of the patient that needs to be searched on Ethereum in the search bar
+
+After the query is added to hyperledger
+
+Pat-s for the ethereum part can be found on the frontend
